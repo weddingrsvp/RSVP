@@ -178,7 +178,8 @@ export default function AdminPanel() {
 
   const generateQRUrl = (code: string) => {
     const baseUrl = window.location.origin;
-    return `${baseUrl}?family=${code}`;
+    const repoBase = "/RSVP"; // <-- add your repo name here
+    return `${baseUrl}${repoBase}/?family=${code}`;
   };
 
   const generateQRCode = (text: string) => {

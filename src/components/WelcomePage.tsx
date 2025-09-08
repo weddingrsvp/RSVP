@@ -52,7 +52,7 @@ export default function WelcomePage({ familyCode, onNext }: WelcomePageProps) {
             Thank you! Your RSVP has already been submitted.
           </p>
           <p className="text-xs sm:text-sm text-gray-500">
-            If you need to make changes, please contact the couple directly.
+            If you need to make changes, please contact the couple/family directly.
           </p>
         </div>
       </div>

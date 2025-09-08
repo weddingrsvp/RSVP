@@ -35,7 +35,7 @@ export default function WelcomePage({ familyCode, onNext }: WelcomePageProps) {
           <div className="text-4xl sm:text-6xl mb-4">💔</div>
           <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Invalid Invitation</h2>
           <p className="text-gray-600 text-sm sm:text-base">
-            We couldn't find your invitation. Please check your QR code or contact the couple.
+            We couldn't find your invitation. Please check your QR code or contact the couple/family.
           </p>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function WelcomePage({ familyCode, onNext }: WelcomePageProps) {
                 📅 Date & Time
               </h3>
               <p className="text-rose-700 text-sm sm:text-base font-medium">{weddingDetails.weddingDate}</p>
-              <p className="text-xs sm:text-sm text-rose-600">Ceremony: {weddingDetails.ceremonyTime}</p>
+              {/* <p className="text-xs sm:text-sm text-rose-600">Ceremony: {weddingDetails.ceremonyTime}</p> */}
               <p className="text-xs sm:text-sm text-rose-600">Reception: {weddingDetails.receptionTime}</p>
             </div>
 
@@ -102,14 +102,14 @@ export default function WelcomePage({ familyCode, onNext }: WelcomePageProps) {
             </div>
           </div>
 
-          {weddingDetails.dressCode && (
+          {/* {weddingDetails.dressCode && (
             <div className="bg-gradient-to-r from-orange-100 to-yellow-100 p-3 sm:p-4 rounded-lg">
               <h3 className="font-semibold text-rose-800 mb-2 flex items-center text-sm sm:text-base">
                 👗 Dress Code
               </h3>
               <p className="text-rose-700 text-sm sm:text-base">{weddingDetails.dressCode}</p>
             </div>
-          )}
+          )} */}
 
           {weddingDetails.additionalInfo && (
             <div className="bg-gradient-to-r from-yellow-100 to-rose-100 p-3 sm:p-4 rounded-lg">

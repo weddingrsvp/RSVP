@@ -43,9 +43,9 @@ export default function ThankYouPage() {
 
         {/* Additional information */}
         <div className="space-y-3 sm:space-y-4 text-gray-600 text-sm sm:text-base mb-6 sm:mb-8">
-          <p className="leading-relaxed">
+          {/* <p className="leading-relaxed">
             You should receive a confirmation email shortly with all the wedding details.
-          </p>
+          </p> */}
           <p className="leading-relaxed">
             If you need to make any changes to your RSVP, please contact us directly.
           </p>

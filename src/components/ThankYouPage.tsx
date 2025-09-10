@@ -18,12 +18,11 @@ export default function ThankYouPage() {
         {/* Success animation */}
         <div className="mb-6 sm:mb-8">
           <div className="text-4xl sm:text-6xl mb-3 sm:mb-4 animate-bounce">🎉</div>
-          <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💕</div>
         </div>
 
         {/* Thank you message */}
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-rose-800 mb-4">
-          Thank You!
+          Jazakallah Khair!
         </h1>
         <p className="text-lg sm:text-xl text-rose-600 mb-6">
           Your RSVP has been successfully submitted
@@ -32,7 +31,7 @@ export default function ThankYouPage() {
         {/* Confirmation details */}
         <div className="bg-gradient-to-r from-rose-50 to-pink-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
           <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-rose-800 mb-4">
-            We can't wait to celebrate with you!
+            We can't wait to have you at our Waleema!
           </h2>
           <div className="space-y-2 text-rose-700 text-sm sm:text-base">
             <p><strong>{weddingDetails.brideName} & {weddingDetails.groomName}</strong></p>
@@ -47,7 +46,7 @@ export default function ThankYouPage() {
             You should receive a confirmation email shortly with all the wedding details.
           </p> */}
           <p className="leading-relaxed">
-            If you need to make any changes to your RSVP, please contact us directly.
+            If you need to make any changes to your RSVP, please contact the couple/family directly.
           </p>
         </div>
 
@@ -60,7 +59,7 @@ export default function ThankYouPage() {
           <span>🎊</span>
         </div>
 
-        {/* Contact info */}
+        {/* Contact info
         <div className="p-3 sm:p-4 bg-gray-50 rounded-lg">
           <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
             Questions? Contact the happy couple at{' '}
@@ -68,7 +67,7 @@ export default function ThankYouPage() {
               wedding@example.com
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

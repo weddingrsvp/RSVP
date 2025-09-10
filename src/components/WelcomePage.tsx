@@ -60,90 +60,42 @@ export default function WelcomePage({ familyCode, onNext }: WelcomePageProps) {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl p-4 sm:p-6 lg:p-8 max-w-2xl w-full">
-        {/* Header with couple names */}
-        <div className="text-center mb-6 sm:mb-8">
-          <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💕</div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-rose-800 mb-2 leading-tight">
-            {weddingDetails.brideName} & {weddingDetails.groomName}
-          </h1>
-          <p className="text-lg sm:text-xl text-rose-600 font-medium">are getting married!</p>
+    <div className="bg-warm-beige min-h-screen flex flex-col items-center justify-center p-4 sm:p-6">
+      <div className="w-full max-w-2xl mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-6 sm:p-8">
+        <div className="text-center mb-6">
+          <span className="text-4xl" role="img" aria-label="love letter">💌</span>
+          <h2 className="text-2xl font-bold text-gray-800">Welcome to our Wedding RSVP!</h2>
+          <p>Please confirm your presence by the deadline. We look forward to host you at our Waleema</p>
         </div>
 
-        {/* Family greeting */}
-        <div className="text-center mb-6 sm:mb-8 p-3 sm:p-4 bg-rose-50 rounded-lg">
-          <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-rose-800 mb-2">
-            Dear {familyData.familyName}
-          </h2>
-          <p className="text-rose-700 text-sm sm:text-base">
-            We're so excited to celebrate with you!
-          </p>
-        </div>
-
-        {/* Wedding details */}
-        <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <div className="bg-gradient-to-r from-rose-100 to-pink-100 p-3 sm:p-4 rounded-lg">
-              <h3 className="font-semibold text-rose-800 mb-2 flex items-center text-sm sm:text-base">
-                📅 Date & Time
-              </h3>
-              <p className="text-rose-700 text-sm sm:text-base font-medium">{weddingDetails.weddingDate}</p>
-              {/* <p className="text-xs sm:text-sm text-rose-600">Ceremony: {weddingDetails.ceremonyTime}</p> */}
-              <p className="text-xs sm:text-sm text-rose-600">Reception: {weddingDetails.receptionTime}</p>
-            </div>
-
-            <div className="bg-gradient-to-r from-pink-100 to-orange-100 p-3 sm:p-4 rounded-lg">
-              <h3 className="font-semibold text-rose-800 mb-2 flex items-center text-sm sm:text-base">
-                📍 Venue
-              </h3>
-              <p className="text-rose-700 font-medium text-sm sm:text-base">{weddingDetails.venue}</p>
-              <p className="text-xs sm:text-sm text-rose-600 leading-relaxed">{weddingDetails.venueAddress}</p>
-            </div>
-          </div>
-
-          {/* {weddingDetails.dressCode && (
-            <div className="bg-gradient-to-r from-orange-100 to-yellow-100 p-3 sm:p-4 rounded-lg">
-              <h3 className="font-semibold text-rose-800 mb-2 flex items-center text-sm sm:text-base">
-                👗 Dress Code
-              </h3>
-              <p className="text-rose-700 text-sm sm:text-base">{weddingDetails.dressCode}</p>
-            </div>
-          )} */}
-
-          {weddingDetails.additionalInfo && (
-            <div className="bg-gradient-to-r from-yellow-100 to-rose-100 p-3 sm:p-4 rounded-lg">
-              <h3 className="font-semibold text-rose-800 mb-2 flex items-center text-sm sm:text-base">
-                💌 Special Note
-              </h3>
-              <p className="text-rose-700 text-sm sm:text-base leading-relaxed">{weddingDetails.additionalInfo}</p>
-            </div>
-          )}
-        </div>
-
-        {/* Guest list preview */}
-        <div className="mb-6 sm:mb-8 p-3 sm:p-4 bg-gray-50 rounded-lg">
-          <h3 className="font-semibold text-gray-800 mb-3 text-sm sm:text-base">Invited Guests:</h3>
-          <div className="grid grid-cols-1 gap-2">
-            {familyData.guests.map((guest) => (
-              <div key={guest._id} className="flex items-center space-x-2 py-1">
-                <span className="text-lg sm:text-xl">{guest.isChild ? '👶' : '👤'}</span>
-                <span className="text-gray-700 text-sm sm:text-base">
-                  {guest.firstName} {guest.lastName}
-                </span>
-                {guest.isChild && (
-                  <span className="text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full">Child</span>
-                )}
+        <div className="space-y-4">
+          <div className="p-4 bg-white/50 rounded-xl">
+            <h3 className="font-bold text-rose-800 text-lg mb-2">Event Details</h3>
+            <div className="border-t border-rose-100 pt-2">
+              <div className="flex justify-between py-2">
+                <span className="font-medium text-rose-700">Date</span>
+                <span className="font-semibold text-rose-900">{weddingDetails.weddingDate}</span>
               </div>
-            ))}
+              <div className="flex justify-between py-2 border-t border-rose-100">
+                <span className="font-medium text-rose-700">Time</span>
+                <span className="font-semibold text-rose-900">{weddingDetails.receptionTime}</span>
+              </div>
+              <div className="flex justify-between py-2 border-t border-rose-100">
+                <span className="font-medium text-rose-700">Venue</span>
+                <span className="font-semibold text-rose-900">{weddingDetails.venue}</span>
+              </div>
+              <div className="flex justify-between pt-2 border-t border-rose-100">
+                <span className="font-medium text-rose-700">Address</span>
+                <span className="font-semibold text-rose-900 text-right">{weddingDetails.venueAddress}</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Continue button */}
-        <div className="text-center">
+        <div className="text-center mt-8">
           <button
             onClick={onNext}
-            className="w-full sm:w-auto bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transform transition hover:scale-105 text-sm sm:text-base"
+            className="w-full sm:w-auto bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform"
           >
             Continue to RSVP ✨
           </button>

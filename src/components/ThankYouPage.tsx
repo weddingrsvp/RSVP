@@ -13,7 +13,7 @@ export default function ThankYouPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="bg-warm-beige min-h-screen flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl p-6 sm:p-8 max-w-2xl w-full text-center">
         {/* Success animation */}
         <div className="mb-6 sm:mb-8">
@@ -31,10 +31,10 @@ export default function ThankYouPage() {
         {/* Confirmation details */}
         <div className="bg-gradient-to-r from-rose-50 to-pink-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
           <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-rose-800 mb-4">
-            We can't wait to have you at our Waleema!
+            Thank you for letting us know. May this gathering be a source of barakah, inshā’Allāh.
           </h2>
           <div className="space-y-2 text-rose-700 text-sm sm:text-base">
-            <p><strong>{weddingDetails.brideName} & {weddingDetails.groomName}</strong></p>
+            <p><strong>{weddingDetails.groomName} & {weddingDetails.brideName}</strong></p>
             <p>{weddingDetails.weddingDate}</p>
             <p className="leading-relaxed">{weddingDetails.venue}</p>
           </div>

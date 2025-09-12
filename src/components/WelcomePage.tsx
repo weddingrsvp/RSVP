@@ -49,7 +49,7 @@ export default function WelcomePage({ familyCode, onNext }: WelcomePageProps) {
           <div className="text-4xl sm:text-6xl mb-4">✅</div>
           <h2 className="text-xl sm:text-2xl font-bold text-green-800 mb-4">RSVP Already Submitted</h2>
           <p className="text-gray-600 mb-4 text-sm sm:text-base">
-            Thank you! Your RSVP has already been submitted.
+             Your RSVP has already been submitted.
           </p>
           <p className="text-xs sm:text-sm text-gray-500">
             If you need to make changes, please contact the couple/family directly.
@@ -64,8 +64,8 @@ export default function WelcomePage({ familyCode, onNext }: WelcomePageProps) {
       <div className="w-full max-w-2xl mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-6 sm:p-8">
         <div className="text-center mb-6">
           <span className="text-4xl" role="img" aria-label="love letter">💌</span>
-          <h2 className="text-2xl font-bold text-gray-800">Welcome to our Wedding RSVP!</h2>
-          <p>Please confirm your presence by the deadline. We look forward to host you at our Waleema</p>
+          <h2 className="text-2xl font-bold text-gray-800">You’re Invited: Waleema RSVP!</h2>
+          <p>Kindly confirm your presence by the deadline. We look forward to hosting you at the Waleema, inshā’Allāh.</p>
         </div>
 
         <div className="space-y-4">

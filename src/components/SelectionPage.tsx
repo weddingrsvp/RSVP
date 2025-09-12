@@ -80,7 +80,7 @@ export default function SelectionPage({ familyCode, onNext, onBack }: SelectionP
   const notAttendingCount = Object.values(guestResponses).filter(r => r.willAttend === false).length;
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="bg-warm-beige min-h-screen flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl p-4 sm:p-6 lg:p-8 max-w-3xl w-full">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8">
@@ -172,9 +172,9 @@ export default function SelectionPage({ familyCode, onNext, onBack }: SelectionP
               <span className="text-red-700 flex items-center">
                 <span className="mr-1">❌</span> Not attending: {notAttendingCount}
               </span>
-              <span className="text-gray-600 flex items-center">
+              {/* <span className="text-gray-600 flex items-center">
                 <span className="mr-1">⏳</span> Pending: {familyData.guests.length - attendingCount - notAttendingCount}
-              </span>
+              </span> */}
             </div>
           </div>
         )}

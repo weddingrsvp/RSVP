@@ -89,10 +89,10 @@ export default function SelectionPage({ familyCode, onNext, onBack }: SelectionP
           <p className="text-rose-600 text-sm sm:text-base">Please let us know who will be attending</p>
         </div>
 
-        {/* Family name */}
+        {/* Family name
         <div className="text-center mb-4 sm:mb-6 p-3 bg-rose-50 rounded-lg">
           <h2 className="text-lg sm:text-xl font-semibold text-rose-800">{familyData.familyName}</h2>
-        </div>
+        </div> */}
 
         {/* Guest selection */}
         <div className="space-y-4 mb-6 sm:mb-8">

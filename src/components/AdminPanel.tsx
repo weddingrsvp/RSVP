@@ -206,15 +206,14 @@ export default function AdminPanel() {
     body { font-family: Arial, sans-serif; margin: 10px; background: white; }
     .header { text-align: center; margin-bottom: 5px; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
     .qr-grid { display: grid; grid-template-columns: repeat(${gridCols}, 1fr); gap: 5px; }
-    .qr-item { text-align: center; border: 1px solid #ddd; padding: 5px; border-radius: 8px; background: white; break-inside: avoid; }
-    .qr-item h6 { margin: 0 0 10px 0; font-size: ${qrPerPage > 16 ? '12px' : '16px'}; color: #333; }
-    .qr-item img { margin: 10px 0; max-width: 100%; height: auto; }
+    .qr-item { text-align: center; border: 1px solid #ddd; padding: 5px; border-radius: 8px; background: white; page-break-inside: avoid; }
+    .qr-item h3 { margin: 0 0 10px 0; font-size: ${qrPerPage > 16 ? '12px' : '16px'}; color: #333; }
+    .qr-item img { margin: 10px 0; width: 150px; height: 150px; }
     .qr-code { font-size: ${qrPerPage > 16 ? '10px' : '12px'}; color: #666; font-family: monospace; margin-top: 10px; word-break: break-all; }
-    .page-break { page-break-before: always; height: 0; }
     @media print { 
       body { margin: 10px; } 
       .qr-grid { gap: 10px; } 
-      .qr-item { padding: 10px; break-inside: avoid; } 
+      .qr-item { padding: 10px; } 
     }
   </style>
 </head>
@@ -223,13 +222,12 @@ export default function AdminPanel() {
     <h2>Wedding RSVP QR Codes</h1>
   </div>
   <div class="qr-grid">
-    ${families.map((family, index) => `
+    ${families.map((family) => `
       <div class="qr-item">
         <h3>${family.familyName}</h3>
         <img src="${generateQRCode(generateQRUrl(family.uniqueCode))}" alt="QR Code for ${family.familyName}" />
         <div class="qr-code">${family.uniqueCode}</div>
       </div>
-      ${(index + 1) % qrPerPage === 0 && index < families.length - 1 ? '<div class="page-break"></div>' : ''}
     `).join('')}
   </div>
   <script>

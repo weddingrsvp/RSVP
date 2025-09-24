@@ -183,7 +183,7 @@ export default function AdminPanel() {
   };
 
   const generateQRCode = (text: string) => {
-    return `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(text)}`;
+    return `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(text)}`;
   };
 
   const handleQRExport = () => {
@@ -208,7 +208,7 @@ export default function AdminPanel() {
     .qr-grid { display: grid; grid-template-columns: repeat(${gridCols}, 1fr); gap: 5px; }
     .qr-item { text-align: center; border: 1px solid #ddd; padding: 5px; border-radius: 8px; background: white; page-break-inside: avoid; }
     .qr-item h3 { margin: 0 0 10px 0; font-size: ${qrPerPage > 16 ? '12px' : '16px'}; color: #333; }
-    .qr-item img { margin: 10px 0; width: 150px; height: 150px; }
+    .qr-item img { margin: 10px 0; width: 2.5cm; height: 2.5cm; }
     .qr-code { font-size: ${qrPerPage > 16 ? '10px' : '12px'}; color: #666; font-family: monospace; margin-top: 10px; word-break: break-all; }
     @media print { 
       body { margin: 10px; } 
